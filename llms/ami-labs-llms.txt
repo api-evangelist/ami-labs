@@ -1,0 +1,43 @@
+# AMI Labs
+
+> Advanced Machine Intelligence (AMI) Labs is a frontier AI research lab building world
+> models — AI systems trained on continuous, high-dimensional real-world sensor data rather
+> than language, intended to understand the physical world, hold persistent memory, reason
+> and plan, and remain controllable and safe. Founded by Yann LeCun (Executive Chairman) with
+> Alexandre LeBrun as CEO, the lab launched publicly on 2026-03-10 with a $1.03B USD round and
+> operates from Paris, New York, Montreal and Singapore.
+
+## Developer surface
+
+AMI Labs publishes **no public API, no documentation, no SDKs, and no machine-readable contract**
+as of 2026-08-17. This is a measured absence, not a gap in our collection: amilabs.xyz is a
+two-page site (its own sitemap.xml lists exactly `/` and `/updates`), every OpenAPI, GraphQL,
+MCP and A2A discovery path returns HTTP 404, and no api./docs./developer./mcp. subdomain resolves
+in DNS. The lab has stated it intends to open-source models and publish papers, but as of this
+date it has released none — there are no models under an AMI Labs account on Hugging Face, no
+first-party packages on npm or PyPI, and no GitHub organization belonging to this company.
+
+- Note: `github.com/amilabs` and the `@amilabs/*` npm scope belong to a DIFFERENT, unrelated
+  company (AmiLabs, Spain, contact@amilabs.pro, org created 2015). Do not attribute them here.
+
+## Company
+
+- [AMI Labs](https://amilabs.xyz): Home — mission, founders, locations.
+- [Updates](https://amilabs.xyz/updates): The lab's only news surface. One post: the 2026-03-10 launch announcement.
+- [Careers](https://jobs.ashbyhq.com/ami): Open roles, hosted on Ashby.
+- Contact: contact@amilabs.xyz
+- Press: press@amilabs.xyz
+
+## Artifacts in this profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/apis.yml): APIs.json 0.20 profile for AMI Labs.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/security/ami-labs-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for amilabs.xyz.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/well-known/ami-labs-well-known.yml): Full /.well-known/ probe record — all 404.
+- [Plans](https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/plans/ami-labs-plans-pricing.yml): No published pricing or plans (plan_count 0).
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/rate-limits/ami-labs-rate-limits.yml): No published rate limits (limit_count 0).
+
+## Provenance
+
+- generated: 2026-08-17
+- method: generated
+- source: apis.yml + repo artifacts + live probes of amilabs.xyz (no /llms.txt is served — https://amilabs.xyz/llms.txt returns 404)

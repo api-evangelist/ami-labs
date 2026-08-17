@@ -1,0 +1,20 @@
+generated: '2026-08-17'
+method: searched
+source: https://amilabs.xyz/
+plan_count: 0
+note: >-
+  AMI Labs publishes no pricing, plans, tiers or commercial terms of any kind. It is a
+  pre-product frontier research lab: there is no pricing page (https://amilabs.xyz/pricing
+  returns 404), and the site's own sitemap.xml declares exactly two URLs (/ and /updates),
+  neither of which mentions a commercial offering. This is not an enterprise "contact us"
+  gate either — no sales form or plan comparison exists to gate. Recorded as an honest zero.
+plans: []
+evidence:
+- url: https://amilabs.xyz/pricing
+  status: 404
+- url: https://amilabs.xyz/sitemap.xml
+  status: 200
+  note: lists only https://amilabs.xyz and https://amilabs.xyz/updates
+- url: https://amilabs.xyz/
+  status: 200
+  note: home page; no pricing, plan or commercial-terms content

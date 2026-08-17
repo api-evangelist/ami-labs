@@ -1,0 +1,19 @@
+generated: '2026-08-17'
+method: searched
+source: https://amilabs.xyz/
+limit_count: 0
+note: >-
+  No rate limits are documented because there is no API to rate-limit. AMI Labs ships no
+  public API, no developer documentation and no machine-readable contract as of 2026-08-17;
+  no docs or developer host resolves in DNS, so there is no runtime surface on which
+  X-RateLimit-*/RateLimit-*/Retry-After headers could be observed or published. Recorded as
+  an honest zero, distinct from "an API exists whose limits are undocumented".
+limits: []
+headers: []
+evidence:
+- url: https://amilabs.xyz/docs
+  status: 404
+- url: https://amilabs.xyz/api
+  status: 404
+- url: https://amilabs.xyz/developers
+  status: 404

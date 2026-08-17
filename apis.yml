@@ -16,10 +16,13 @@ description: 'AMI Labs is a frontier AI research lab building intelligent system
   real world. The lab develops world models trained with self-supervised learning on continuous, high-dimensional
   sensor data (cameras and other sensors), aiming for AI with persistent memory, reasoning and planning,
   and controllable, safety-oriented behavior. Targeted applications span industrial process control, automation,
-  wearable devices, robotics, and healthcare. AMI Labs launched officially in March 2026 with a $1.03B
-  funding round and operates from Paris, New York, Montreal, and Singapore. It is backed by HV Capital,
-  Obvious Ventures, and Wing Venture Capital. The lab operates as a research organization and does not
-  currently publish a public developer platform, API, SDKs, or documentation.'
+  wearable devices, robotics, and healthcare. Founded by Yann LeCun as Executive Chairman with Alexandre
+  LeBrun as CEO, AMI Labs launched officially on 2026-03-10 with a $1.03B USD round co-led by Cathay
+  Innovation, Greycroft, Hiro Capital, HV Capital, and Bezos Expeditions, and operates from Paris, New
+  York, Montreal, and Singapore. The lab operates as a research organization and publishes no public
+  developer platform, API, SDKs, documentation, or machine-readable contract: amilabs.xyz is a two-page
+  site whose own sitemap declares only / and /updates, and every OpenAPI, GraphQL, MCP, A2A and
+  /.well-known/ discovery path probed on it returns HTTP 404.'
 url: https://raw.githubusercontent.com/api-evangelist/ami-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -31,7 +34,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-17'
 tags:
 - Company
 - Ai Enterprise Software
@@ -54,8 +57,43 @@ common:
   url: https://amilabs.xyz
 - type: Blog
   url: https://amilabs.xyz/updates
+- type: LLMsTxt
+  url: llms/ami-labs-llms.txt
+- type: Careers
+  url: https://jobs.ashbyhq.com/ami
+- type: Contact
+  url: mailto:contact@amilabs.xyz
+- type: Press
+  url: mailto:press@amilabs.xyz
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Full contract-discovery pass run against amilabs.xyz (the only host — no apis[] entries, no
+    OpenAPI servers[], no api./docs./developer./mcp./app./status./trust. subdomain resolves in DNS).
+    OpenAPI/Swagger, GraphQL, MCP, A2A agent-card (both canonical and legacy paths) and the whole
+    /.well-known/ surface all returned 404. No first-party packages on npm/PyPI, no Hugging Face
+    models, and no GitHub organization for this company — github.com/amilabs and the @amilabs/* npm
+    scope belong to an unrelated firm (AmiLabs, Spain, contact@amilabs.pro, created 2015) and were
+    deliberately NOT wired. No WellKnown, SecurityTxt, Plans or RateLimits pointer emitted, because
+    each of those artifacts records an absence rather than a presence.
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AMI Labs is a pre-product research lab whose entire web presence is two pages — its own
+    sitemap.xml declares exactly https://amilabs.xyz and https://amilabs.xyz/updates — with no
+    docs, no developer host in DNS, and a single March 2026 launch post that names no API,
+    model release, or open-source repository.
+  evidence:
+  - url: https://amilabs.xyz/sitemap.xml
+    status: 200
+  - url: https://amilabs.xyz/openapi.json
+    status: 404
+  - url: https://amilabs.xyz/.well-known/agent-card.json
+    status: 404
+  - url: https://amilabs.xyz/docs
+    status: 404
+  checked: '2026-08-17'

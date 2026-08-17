@@ -1,0 +1,37 @@
+generated: '2026-08-17'
+method: probed
+source: live HTTPS probes of every host named in apis.yml
+note: >-
+  Recorded ABSENCE, not presence. Every /.well-known/ path probed on amilabs.xyz returned
+  HTTP 404 with a text/html body (the site's own not-found page), so NO WellKnown and NO
+  SecurityTxt pointer is wired into apis.yml — the provider serves none of these surfaces.
+  amilabs.xyz is the only host to probe: apis.yml carries no apis[] entries, no OpenAPI
+  servers[] exist, and none of the conventional API/docs subdomains resolve in DNS
+  (api., docs., developer., app., mcp., trust., status., platform. — all NXDOMAIN).
+hosts_probed:
+- host: https://amilabs.xyz
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.amilabs.xyz
+  resolves: false
+  note: NXDOMAIN — no A/AAAA record; nothing to probe
+- host: https://docs.amilabs.xyz
+  resolves: false
+  note: NXDOMAIN — no A/AAAA record; nothing to probe
+documents_found: 0
