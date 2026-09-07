@@ -1,0 +1,37 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  Registry searches of npm, PyPI and GitHub for first-party Advanced Machine Intelligence client
+  libraries, 2026-09-07.
+package_count: 0
+packages: []
+note: >-
+  Advanced Machine Intelligence publishes no client libraries, SDKs or CLIs. It has no API to wrap
+  and no public GitHub organization. Two near-miss namespaces were checked and REJECTED on ownership
+  grounds, and are recorded here so a later run does not adopt them: the npm scope `@amilabs/*`
+  (five public packages including @amilabs/nginx-logs-replay and @amilabs/pink-unicorn) belongs to
+  github.com/amilabs, an organization created in 2015, located in Spain and reachable at
+  contact@amilabs.pro — five years older than this company and unrelated to it; and the GitHub
+  account github.com/AMI-labs is a personal account belonging to an individual named Adem Ademi,
+  created 2025-07-30. Neither is AMI Labs (amilabs.xyz, contact@amilabs.xyz). No `SDKs` pointer is
+  wired, because the company ships none.
+rejected_candidates:
+- namespace: 'npm: @amilabs/*'
+  url: https://www.npmjs.com/org/amilabs
+  reason: >-
+    Owned by github.com/amilabs — a Spanish organization created 2015-01-23 with contact
+    email contact@amilabs.pro and 42 public repositories. Advanced Machine Intelligence was
+    founded in 2026 and uses amilabs.xyz / contact@amilabs.xyz.
+- namespace: 'github.com/AMI-labs'
+  url: https://github.com/AMI-labs
+  reason: >-
+    A personal GitHub user account (type User, display name "Adem Ademi", created 2025-07-30),
+    not a company organization.
+registries_checked:
+- registry: npm
+  query: amilabs, ami-labs, advanced-machine-intelligence
+  first_party_hits: 0
+- registry: pypi
+  query: amilabs, ami-labs, advanced-machine-intelligence
+  first_party_hits: 0
+  status: 404
